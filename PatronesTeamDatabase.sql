@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-06-2019 a las 21:46:08
--- Versión del servidor: 10.1.40-MariaDB
--- Versión de PHP: 7.1.29
+-- Tiempo de generación: 20-06-2019 a las 21:53:48
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -36,6 +36,13 @@ CREATE TABLE `asignar` (
   `fecha_asignacion` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `asignar`
+--
+
+INSERT INTO `asignar` (`usuarios_id`, `Trabajos_id`, `fecha_asignacion`) VALUES
+(1, 1, '0000-00-00 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +53,15 @@ CREATE TABLE `tipos_trabajo` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `tipos_trabajo`
+--
+
+INSERT INTO `tipos_trabajo` (`id`, `nombre`) VALUES
+(1, 'Servicio Técnico'),
+(2, 'Desarrollo de Software'),
+(3, 'Instalación de redes');
 
 -- --------------------------------------------------------
 
@@ -62,6 +78,13 @@ CREATE TABLE `trabajos` (
   `status` int(1) DEFAULT NULL COMMENT 'En trabajo esta culminado o no.\n',
   `Tipos_trabajo_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `trabajos`
+--
+
+INSERT INTO `trabajos` (`id`, `nombre`, `descripcion`, `fecha_inicio`, `fecha_fin`, `status`, `Tipos_trabajo_id`) VALUES
+(1, 'Casa Ricoleta', 'Se necesita solucionar problemas entre los laboratorios de cómputo del centro', '0000-00-00 00:00:00', NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -80,6 +103,13 @@ CREATE TABLE `usuarios` (
   `status` int(1) DEFAULT NULL COMMENT 'el usuario esta activo o no',
   `fregistro` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `apaterno`, `amaterno`, `nombre`, `usuario`, `clave`, `tipo`, `status`, `fregistro`) VALUES
+(1, 'Aparcana', 'Tasayco', 'Andrés', 'aaparcana', '82670075', 1, 1, '0000-00-00 00:00:00');
 
 --
 -- Índices para tablas volcadas
@@ -117,10 +147,22 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `tipos_trabajo`
+--
+ALTER TABLE `tipos_trabajo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `trabajos`
+--
+ALTER TABLE `trabajos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
