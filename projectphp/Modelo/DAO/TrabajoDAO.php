@@ -19,9 +19,7 @@ class TrabajoDAO implements CRUD {
         $data = "";
         $statement = "SELECT * FROM trabajos";
         $query= $this->con->query($statement);
-        /*while($row = mysql_fetch_array($query)){
-            echo $row;
-        }*/
+        
         
         return $query;
     }
