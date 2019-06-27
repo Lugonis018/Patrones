@@ -24,7 +24,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Menu1</a> 
+                <a class="navbar-brand" href="#">Jefe</a> 
             </div>
             <div class="row-fluid">
                 <div class="row" style="float: left; margin: 0 0 0 25px;" >
@@ -44,16 +44,16 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                         <img src="assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
                     <li>
-                        <a  href="#" onclick="loadUsers()"><i class="fa fa-dashboard fa-2x" ></i> Dashboard</a>
+                        <a  href="#" onclick="loadUsers()"><i class="fa fa-dashboard fa-2x" ></i> Usuarios</a>
                     </li>
                       <li>
-                        <a  href="#"><i class="fa fa-desktop fa-2x"></i> UI Elements</a>
+                        <a  href="#"><i class="fa fa-desktop fa-2x"></i> Trabajos</a>
                     </li>
                     <li>
-                        <a  href="#"><i class="fa fa-qrcode fa-2x"></i> Tabs & Panels</a>
+                        <a  href="#"><i class="fa fa-qrcode fa-2x"></i> Horarios</a>
                     </li>
                     <li  >
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-2x"></i> Morris Charts</a>
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-2x"></i> Documentos</a>
                     </li>   
                       <li  >
                         <a  href="#"><i class="fa fa-table fa-2x"></i> Table Examples</a>

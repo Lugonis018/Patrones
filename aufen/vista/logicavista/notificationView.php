@@ -78,6 +78,14 @@ class Notification {
 			    	 <strong>¡ERROR!</strong> Completa todos los campos e intentalo de nuevo.</p>
 			    	</div>';
 		return $mensaje;
+	}
+	
+	public function existsTrabajo(){
+    	$mensaje = '<div class="alert alert-dismissible alert-danger">
+    	            <button type="button" class="close" data-dismiss="alert">&times;</button>
+    	            <strong>!Parece que el trabajo ya existe!</strong> Elige otro e intentalo de nuevo.
+    	          </div>';
+    	return $mensaje;
     }
 }
 ?>

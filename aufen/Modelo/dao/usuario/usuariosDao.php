@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/login-mvc/ruta.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/aufen/ruta.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/conexion.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/procesaParametros.php';
 require_once $_SERVER['DOCUMENT_ROOT'].ruta::ruta.'/modelo/dao/usuario/usuariosSql.php';
@@ -67,7 +67,7 @@ class usuarioDao {
                 {
 
                     session_start();
-                    $_SESSION['idusuario']   = $row['idusuario']; 
+                    $_SESSION['idusuario']   = $row['id']; 
                     $_SESSION['nombre']      = $row['apaterno'].' '.$row['amaterno'].' '.$row['nombre']; 
                     $_SESSION['tipo']        = $row['tipo'];               
                     $result = "<script>window.location='main.php';</script>"; 
@@ -108,7 +108,7 @@ class usuarioDao {
     }
 
     function saveDataUsuarioDao($id, $apaterno, $amaterno, $nombre, $usuario, $clave, $tipo, $status) {
-      $st = "UPDATE usuarios SET apaterno='$apaterno', amaterno='$amaterno', nombre='$nombre', usuario='$usuario', clave='$clave', tipo='$tipo', status='$status' WHERE idUsuario = '$id'";
+      $st = "UPDATE usuarios SET apaterno='$apaterno', amaterno='$amaterno', nombre='$nombre', usuario='$usuario', clave='$clave', tipo='$tipo', status='$status' WHERE id = '$id'";
       $query = $this->con->query($st); 
       $result = Notification::updatedRecord($query);
       return $result;
@@ -133,7 +133,7 @@ class usuarioDao {
       $eliminar = '<a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" id=\"'.$row['usuario'].'\" onclick=\"delUsuario(this)\" class=\"btn btn-danger\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>';
         
         $data.='{
-              "id":"'.$row['idusuario'].'",
+              "id":"'.$row['id'].'",
               "paterno":"'.$row['apaterno'].'",
               "materno":"'.$row['amaterno'].'",
               "nombre":"'.$row['nombre'].'",
@@ -162,7 +162,7 @@ class usuarioDao {
         $cad = '
             <fieldset>
                 <div class="form-group"> 
-                    <input type="hidden" class="form-control" name="a" value="'.$row['idusuario'].'">                           
+                    <input type="hidden" class="form-control" name="a" value="'.$row['id'].'">                           
                     <div class="col-lg-4">
                         <div class="form-group" id="campoapaterno">
                             <label class="control-label" for="apaterno">Apellido paterno</label>
