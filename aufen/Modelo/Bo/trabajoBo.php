@@ -18,7 +18,7 @@ class trabajoBo {
     */
 
     function registrarTrabajoBo($nombre, $descripcion, $fecha_inicio, $status, $tipo_trabajo) {
-        $resultado = $this->dao->registrarUsuarioDao($nombre, $descripcion, $fecha_inicio, $status, $tipo_trabajo);
+        $resultado = $this->dao->registrarTrabajoDao($nombre, $descripcion, $fecha_inicio, $status, $tipo_trabajo);
         return $resultado;
     }
 

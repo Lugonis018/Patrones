@@ -12,3 +12,10 @@ function loadUsers() {
         $('#contenido').fadeIn();
     });
 }  
+function loadTrabajos() {
+    $('#contenido').html("");
+    $.post("trabajos.php", function(response) {        
+        $('#contenido').html(response);
+        $('#contenido').fadeIn();
+    });
+}  

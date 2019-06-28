@@ -15,7 +15,7 @@ function rgTrabajo() {
   var descripcion = $("#descripcion").val();
   var fecha_inicio =$("#fecha_inicio").val();
   var status = 1;//1:Activo
-  var $tipo_trabajo = $("#tiposTrabajoId").val();  
+  var tipo_trabajo = $("#tiposTrabajoId").val();  
   
   if (nombre == null || nombre.length == 0) {
     $("#camponombre").addClass("has-error");
@@ -41,56 +41,41 @@ function rgTrabajo() {
   }else {
     $("#camponombre").removeClass("has-error");    
   }*/
-       
-  if (usuario == null || usuario.length == 0) {
-    $("#campousuario").addClass("has-error");
-    alert("Por favor ingresa tu usuario");
-    return false;
-  }else {
-    $("#campousuario").removeClass("has-error");
-  }
-  
-  if (clave == null || clave.length == 0) {
-    $("#campoclave").addClass("has-error");
-    alert("Por favor ingresa tu clave de acceso");
-    return false;
-  }else {
-    $("#campoclave").removeClass("has-error");    
-  }     
+
     $("#notificacion").html("");
     var datos = "action=insert&" + $("#formregistro").serialize();
-    $.post("../controlador/usersController.php", datos, function(data) {        
+    $.post("../controlador/trabajosController.php", datos, function(data) {        
         $('#notificacion').html(data);
         $('#notificacion').fadeIn();  
     });    
   });
 }
 
-function upUsuario() {         
+function upTrabajo() {         
     $("#mensaje").html("");
     var datos = "action=savedata&" + $("#formactualizar").serialize();
-    $.post("../controlador/usersController.php", datos, function(data) {        
+    $.post("../controlador/trabajosController.php", datos, function(data) {        
         $('#mensaje').html(data);
         $('#mensaje').fadeIn();
     });
 }
 
-function traeDatosUsuarioId(user) {
+function traeDatosTrabajoId(trabajo) {
   $("#mensaje").html("");
   $('#contenido-update').html("");
-  var id    = user.id;
+  var id    = trabajo.id;
   var datos = "action=update&id="+id ;
-  $.post("../controlador/usersController.php", datos, function(data) {
+  $.post("../controlador/trabajosController.php", datos, function(data) {
       $('#contenido-update').html(data);        
   });
 }
 
-function delUsuario(user) { 
-    if(confirm('¿Seguro que desea eliminar este usuario?')){
+function delTrabajo(trabajo) { 
+    if(confirm('¿Seguro que desea eliminar este trabajo?')){
       $("#mensaje-delete").html("");
-      var id    = user.id;
+      var id    = trabajo.id;
       var datos = "action=delete&id="+id ;
-      $.post("../controlador/usersController.php", datos, function(data) {
+      $.post("../controlador/trabajosController.php", datos, function(data) {
           $('#mensaje-delete').prepend(data);
           $('#mensaje-delete').show('slow');
           $('#mensaje-delete').fadeOut(5000);  
@@ -98,9 +83,9 @@ function delUsuario(user) {
     } 
 }
 
-function loadUsers() {
+function loadTrabajos() {
     $('#contenido').html("");
-    $.post("users.php", function(response) {        
+    $.post("trabajos.php", function(response) {        
         $('#contenido').html(response);
         $('#contenido').fadeIn();
     });
@@ -110,20 +95,18 @@ function tooltip() {
    $('[data-toggle="tooltip"]').tooltip(); 
 }
 
-function loadDataTableUsuarios() {
+function loadDataTableTrabajos() {
   $('#example').DataTable( {  
     "bDeferRender": true,
-    "ajax": "../controlador/loadListController.php?action=users",        
+    "ajax": "../controlador/loadListController.php?action=trabajos",        
     "columns": [
     { "data" : "id" },
-    { "data" : "paterno" },
-    { "data" : "materno" },
-    { "data" : "nombre"},
-    { "data" : "usuario"},
-    { "data" : "clave"},
-    { "data" : "tipo"},
+    { "data" : "nombre" },
+    { "data" : "descripcion" },
+    { "data" : "fecha_inicio"},
+    { "data" : "fecha_fin"},
     { "data" : "status"},
-    { "data" : "fecha"},
+    { "data" : "tipo"},
     { "data" : "acciones"}
     ],      
     "sPaginationType": "full_numbers",          

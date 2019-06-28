@@ -20,7 +20,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <a href="#" class="btn btn-info" onclick="loadUsers()"><i class="fa fa-refresh"></i>&nbsp;Refrescar</a>
+                <a href="#" class="btn btn-info" onclick="loadTrabajos()"><i class="fa fa-refresh"></i>&nbsp;Refrescar</a>
             </div>
         </div>
         <div class="row">            

@@ -7,8 +7,8 @@ switch ($_POST['action']) {
         $nombre  = $_POST['nombre'];
         $descripcion  = $_POST['descripcion'];
         $fecha_inicio    = $_POST['fecha_inicio'];
-        $status   = $_POST['status'];
-        $tipo_trabajo     = $_POST['tipo_trabajo'];
+        $status   = 1;
+        $tipo_trabajo     = $_POST['tiposTrabajoId'];
 
         $bo = new trabajoBo();
         $r = $bo->registrarTrabajoBo($nombre, $descripcion, $fecha_inicio, $status, $tipo_trabajo);
@@ -25,7 +25,7 @@ switch ($_POST['action']) {
 
     case 'savedata':
         $id        = $_POST['a']; 
-        $name  = $_POST['b'];
+        $nombre  = $_POST['b'];
         $descripcion  = $_POST['c'];
         $fecha_inicio    = $_POST['d'];
         $fecha_fin   = $_POST['j'];
@@ -33,7 +33,7 @@ switch ($_POST['action']) {
         $tipo_trabajo      = $_POST['m'];
 
         $bo = new trabajoBo();
-        $r = $bo->saveDataTrabajoDao($id, $nombre, $descripcion, $fecha_inicio, $fecha_fin, $status, $tipo_trabajo);
+        $r = $bo->saveDataTrabajoBo($id, $nombre, $descripcion, $fecha_inicio, $fecha_fin, $status, $tipo_trabajo);
         print $r;
         break;
 

@@ -47,7 +47,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                         <a  href="#" onclick="loadUsers()"><i class="fa fa-dashboard fa-2x" ></i> Usuarios</a>
                     </li>
                       <li>
-                        <a  href="#"><i class="fa fa-desktop fa-2x"></i> Trabajos</a>
+                        <a  href="#" onclick="loadTrabajos()"><i class="fa fa-desktop fa-2x"></i> Trabajos</a>
                     </li>
                     <li>
                         <a  href="#"><i class="fa fa-qrcode fa-2x"></i> Horarios</a>

@@ -94,7 +94,7 @@ class trabajoDao {
       if($query->num_rows==0)
       {
         $st = "INSERT INTO trabajos(nombre, descripcion, fecha_inicio, fecha_fin, status, Tipos_trabajo_id) 
-        VALUES('$nombre', '$descripcion', '$fecha_inicio', NULL, '$status', $tipo_trabajo)";
+        VALUES('$nombre', '$descripcion', '$fecha_inicio', NULL, $status, $tipo_trabajo)";
 
         $query = $this->con->query($st); 
         $result = Notification::registeredRecord($query);
@@ -108,7 +108,7 @@ class trabajoDao {
     }
 
     function saveDataTrabajoDao($id, $nombre, $descripcion, $fecha_inicio, $fecha_fin, $status, $tipo_trabajo) {
-      $st = "UPDATE trabajos SET nombre='$nombre', descripcion='$descripcion', fecha_inicio='$fecha_inicio', fecha_fin='$fecha_fin', status='$status', Tipos_trabajo_id='$tipo_trabajo' WHERE id = '$id'";
+      $st = "UPDATE trabajos SET nombre='$nombre', descripcion='$descripcion', fecha_inicio='$fecha_inicio', fecha_fin='$fecha_fin', status=$status, Tipos_trabajo_id=$tipo_trabajo WHERE id = $id";
       $query = $this->con->query($st); 
       $result = Notification::updatedRecord($query);
       return $result;
