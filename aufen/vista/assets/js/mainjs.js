@@ -3,7 +3,9 @@ x = $(document);
 x.ready(inicializarEventos);
 
 function inicializarEventos() {
-    loadUsers();        
+    loadUsers(); 
+    loadTrabajos();
+    loadDocumentos();       
 }
 function loadUsers() {
     $('#contenido').html("");
@@ -15,6 +17,13 @@ function loadUsers() {
 function loadTrabajos() {
     $('#contenido').html("");
     $.post("trabajos.php", function(response) {        
+        $('#contenido').html(response);
+        $('#contenido').fadeIn();
+    });
+}
+function loadDocumentos() {
+    $('#contenido').html("");
+    $.post("PDF.php", function(response) {        
         $('#contenido').html(response);
         $('#contenido').fadeIn();
     });

@@ -176,13 +176,13 @@ class trabajoDao {
                     <div class="col-lg-4">
                         <div class="form-group" id="campofecha_inicio">
                             <label class="control-label" for="fecha_inicio">Fecha de Inicio</label>
-                            <input type="text" class="form-control" id="fecha_inicio" name="d" value="'.$row['fecha_inicio'].'" required>
+                            <input type="datetime-local" class="form-control" id="fecha_inicio" name="d" value="'.$row['fecha_inicio'].'" required>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group" id="campofecha_fin">
                             <label class="control-label" for="fecha_fin">Fecha de Fin</label>
-                            <input type="text" class="form-control" id="fecha_fin" name="j" value="'.$row['fecha_fin'].'" readonly>
+                            <input type="datetime-local" class="form-control" id="fecha_fin" name="j" value="'.$row['fecha_fin'].'" readonly>
                         </div>
                     </div>
                     <div class="col-lg-6">

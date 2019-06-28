@@ -50,10 +50,10 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                         <a  href="#" onclick="loadTrabajos()"><i class="fa fa-desktop fa-2x"></i> Trabajos</a>
                     </li>
                     <li>
-                        <a  href="#"><i class="fa fa-qrcode fa-2x"></i> Horarios</a>
+                        <a  href="#" ><i class="fa fa-qrcode fa-2x"></i> Horarios</a>
                     </li>
                     <li  >
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-2x"></i> Documentos</a>
+                        <a  href="" onclick="loadDocumentos()"><i class="fa fa-bar-chart-o fa-2x"></i> Documentos</a>
                     </li>   
                       <li  >
                         <a  href="#"><i class="fa fa-table fa-2x"></i> Table Examples</a>
