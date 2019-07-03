@@ -132,14 +132,28 @@ class trabajoDao {
       $editar = '<a href=\"#\" data-toggle=\"modal\" data-target=\"#myModalActualiza\" id=\"'.$row['id'].'\" onclick=\"traeDatosTrabajoId(this)\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>';
       $eliminar = '<a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" id=\"'.$row['id'].'\" onclick=\"delTrabajo(this)\" class=\"btn btn-danger\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>';
         
+        switch ($row['status']) {
+            case 1:
+                $estadotrabajo='Activo';
+                break;
+            case 0:
+                $estadotrabajo='Inactivo';
+                break;
+            default:
+                $estadotrabajo='Sigues rompiendolo';
+                break;
+      }
+        $st1 = "SELECT nombre FROM `tipos_trabajo` WHERE id = " . $row['Tipos_trabajo_id'] ;
+        $query= $this->con->query($st1);
+        $row1 =  mysqli_fetch_array($query);
         $data.='{
               "id":"'.$row['id'].'",
               "nombre":"'.$row['nombre'].'",
               "descripcion":"'.$row['descripcion'].'",
               "fecha_inicio":"'.$row['fecha_inicio'].'",
               "fecha_fin":"'.$row['fecha_fin'].'",
-              "status":"'.$row['status'].'",
-              "tipo":"'.$row['Tipos_trabajo_id'].'",
+              "status":"'.$estadotrabajo.'",
+              "tipo":"'.$row1['nombre'].'",
               "acciones":"'.$editar.$eliminar.'"
             },';
     }

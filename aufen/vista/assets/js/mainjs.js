@@ -20,7 +20,7 @@ function loadTrabajos() {
         $('#contenido').html(response);
         $('#contenido').fadeIn();
     });
-}
+} 
 function loadDocumentos() {
     $('#contenido').html("");
     $.post("PDF.php", function(response) {        
@@ -28,3 +28,10 @@ function loadDocumentos() {
         $('#contenido').fadeIn();
     });
 }  
+function loadHorarios() {
+    $('#contenido').html("");
+    $.post("horarios.php", function(response) {        
+        $('#contenido').html(response);
+        $('#contenido').fadeIn();
+    });
+} 

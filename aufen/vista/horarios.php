@@ -20,13 +20,13 @@ require_once "../controlador/sessionUserTypeAdmin.php";
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <a href="#" class="btn btn-info" onclick="loadTrabajos()"><i class="fa fa-refresh"></i>&nbsp;Refrescar</a>
+                <a href="#" class="btn btn-info" onclick="loadHorarios()"><i class="fa fa-refresh"></i>&nbsp;Refrescar</a>
             </div>
         </div>
         <div class="row">            
             <div id="mensaje-delete"></div>            
-            <h1>Trabajos                
-                <a href="" data-toggle="modal" data-target="#myModal"  class="btn btn-success pull-right menu"><i class="fa fa-user-plus " aria-hidden="true"></i>&nbsp;Nuevo trabajo</a>
+            <h1>Horarios                
+                <a href="" data-toggle="modal" data-target="#myModal"  class="btn btn-success pull-right menu"><i class="fa fa-user-plus " aria-hidden="true"></i>&nbsp;Nueva asignación</a>
             </h1>  
         </div>
         <div class="row">    
@@ -34,12 +34,9 @@ require_once "../controlador/sessionUserTypeAdmin.php";
             <thead>
             <tr>
                 <th>Id</th>
-                <th>Nombre</th>
-                <th>Descripción</th>
+                <th>Empleado</th>
+                <th>Trabajo</th>
                 <th>Fecha de Inicio</th>               
-                <th>Fecha de Fin</th>
-                <th>Estado</th>
-                <th>Tipo de trabajo</th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -51,9 +48,6 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Fecha de Inicio</th>               
-                <th>Fecha de Fin</th>
-                <th>Estado</th>
-                <th>Tipo de trabajo</th>
                 <th>Acciones</th>
             </tr>
             </tfoot>
@@ -76,46 +70,23 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                         <fieldset>
                             <div class="form-group">                            
                                 <div class="col-lg-4">
-                                    <div class="form-group" id="camponombre">
-                                        <label class="control-label" for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" id="nombre" name="nombre" autofocus>
+                                    <div class="form-group" id="campousuario">
+                                        <label class="control-label" for="usuarios_id">Empleado</label>
+                                        <input type="text" class="form-control" id="usuarios_id" name="usuarios_id" autofocus>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="form-group" id="campodescripcion">
-                                        <label class="control-label" for="descripcion">Descripción</label>
-                                        <input type="text" class="form-control" id="descripcion" name="descripcion">
+                                    <div class="form-group" id="campotrabajo">
+                                        <label class="control-label" for="trabajos_id">Trabajo</label>
+                                        <input type="text" class="form-control" id="trabajos_id" name="trabajos_id">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="form-group" id="campofecha_inicio">
-                                        <label class="control-label" for="fecha_inicio">Fecha de Inicio</label>
-                                        <input type="datetime-local" class="form-control" id="fecha_inicio" name="fecha_inicio">
+                                    <div class="form-group" id="campofecha_asignacion">
+                                        <label class="control-label" for="fecha_asignacion">Fecha de Asignación</label>
+                                        <input type="datetime-local" class="form-control" id="fecha_asignacion" name="fecha_asignacion">
                                     </div>
-                                </div>
-                                <!--<div class="col-lg-6">
-                                    <div class="form-group" id="campofecha_fin">
-                                        <label class="control-label" for="fecha_fin">Fecha de Fin</label>
-                                        <input type="text" class="form-control" id="fecha_fin" name="fecha_fin">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group" id="campoStatus">
-                                        <select class="form-control" id="status" name="status">
-                                            <option selected value="1">Activo</option>
-                                            <option value="0">Inactivo</option>                                   
-                                        </select>                                    
-                                    </div>
-                                </div> -->
-                                <div class="col-lg-6">
-                                    <div class="form-group" id="campoTiposTrabajoId">
-                                        <select class="form-control" id="tiposTrabajoId" name="tiposTrabajoId">
-                                        <option selected value="1">Tipos de trabajo 1</option>
-                                        <option value="2">Tipos de trabajo 2</option>
-                                        <option value="3">Tipos de trabajo 3</option>
-                                        </select>                                    
-                                    </div>
-                                </div>                            
+                                </div>                          
                                 <div class="col-lg-4 col-lg-offset-8">
                                     <div class="form-group">
                                          <button type="submit" class="btn btn-primary btn-block">Registrar</button>                                     
@@ -158,6 +129,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="assets/js/dataTables.bootstrap.min.js"></script>          
     <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/trabajosjs.js"></script>
+    <script src="assets/js/horariosjs.js"></script>
+   
 </body>
 </html>

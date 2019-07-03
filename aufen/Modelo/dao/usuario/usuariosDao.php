@@ -132,6 +132,30 @@ class usuarioDao {
       $editar = '<a href=\"#\" data-toggle=\"modal\" data-target=\"#myModalActualiza\" id=\"'.$row['usuario'].'\" onclick=\"traeDatosUsuarioId(this)\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Editar\" class=\"btn btn-primary\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>';
       $eliminar = '<a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" id=\"'.$row['usuario'].'\" onclick=\"delUsuario(this)\" class=\"btn btn-danger\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>';
         
+      switch ($row['tipo']) {
+          case 1:
+              $tipousuario='Jefe';
+              break;
+          case 2:
+              $tipousuario='Técnico';
+              break;
+          default:
+              $tipousuario='¡Has roto la base de datos!';
+              break;
+      }
+
+      switch ($row['status']) {
+          case 1:
+              $estadousuario='Activo';
+              break;
+          case 0:
+              $estadousuario='Inactivo';
+              break;
+          default:
+              $estadousuario='Ya dejame, ya estoy muerto';
+              break;
+      }
+
         $data.='{
               "id":"'.$row['id'].'",
               "paterno":"'.$row['apaterno'].'",
@@ -139,8 +163,8 @@ class usuarioDao {
               "nombre":"'.$row['nombre'].'",
               "usuario":"'.$row['usuario'].'",
               "clave":"'.$row['clave'].'",
-              "tipo":"'.$row['tipo'].'",
-              "status":"'.$row['status'].'",
+              "tipo":"'.$tipousuario.'",
+              "status":"'.$estadousuario.'",
               "fecha":"'.$row['fregistro'].'",
               "acciones":"'.$editar.$eliminar.'"
             },';
