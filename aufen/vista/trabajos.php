@@ -93,20 +93,6 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                                         <input type="datetime-local" class="form-control" id="fecha_inicio" name="fecha_inicio">
                                     </div>
                                 </div>
-                                <!--<div class="col-lg-6">
-                                    <div class="form-group" id="campofecha_fin">
-                                        <label class="control-label" for="fecha_fin">Fecha de Fin</label>
-                                        <input type="text" class="form-control" id="fecha_fin" name="fecha_fin">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group" id="campoStatus">
-                                        <select class="form-control" id="status" name="status">
-                                            <option selected value="1">Activo</option>
-                                            <option value="0">Inactivo</option>                                   
-                                        </select>                                    
-                                    </div>
-                                </div> -->
                                 <div class="col-lg-6">
                                     <div class="form-group" id="campoTiposTrabajoId">
                                         <select class="form-control" id="tiposTrabajoId" name="tiposTrabajoId">

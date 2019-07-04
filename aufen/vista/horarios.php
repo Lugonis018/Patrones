@@ -6,7 +6,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Trabajos</title>
+    <title>Horarios</title>
     <!--CSS-->    
     <link rel="stylesheet" href="assets/css/bootstrap-yeti.css">
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
@@ -109,7 +109,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
             <div class="modal-content" >
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"><b></b>Actualizar trabajo</h4>
+                    <h4 class="modal-title"><b></b>Actualizar Horario</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row-fluid" id="mensaje"></div>

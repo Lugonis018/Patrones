@@ -134,12 +134,12 @@ class horariosDao {
         $eliminar = '<a href=\"#\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Eliminar\" id=\"'.$row['id'].'\" onclick=\"delHorario(this)\" class=\"btn btn-danger\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>';
         
         $st = "SELECT nombre FROM usuarios WHERE id=".$row['usuarios_id'];
-        $query= $this->con->query($st); 
-        $row1 =  mysqli_fetch_array($query);
+        $query1= $this->con->query($st); 
+        $row1 =  mysqli_fetch_array($query1);
 
         $st = "SELECT nombre FROM trabajos WHERE id=".$row['Trabajos_id'];
-        $query= $this->con->query($st); 
-        $row2 =  mysqli_fetch_array($query);
+        $query2= $this->con->query($st);
+        $row2 =  mysqli_fetch_array($query2);
 
         $data.='{
               "id":"'.$row['id'].'",

@@ -144,8 +144,8 @@ class trabajoDao {
                 break;
       }
         $st1 = "SELECT nombre FROM `tipos_trabajo` WHERE id = " . $row['Tipos_trabajo_id'] ;
-        $query= $this->con->query($st1);
-        $row1 =  mysqli_fetch_array($query);
+        $query1= $this->con->query($st1);
+        $row1 =  mysqli_fetch_array($query1);
         $data.='{
               "id":"'.$row['id'].'",
               "nombre":"'.$row['nombre'].'",
