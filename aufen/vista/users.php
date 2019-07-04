@@ -100,28 +100,29 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                                 <div class="col-lg-6">
                                     <div class="form-group" id="campousuario">
                                         <label class="control-label" for="usuario">Usuario</label>
-                                        <input type="text" class="form-control" id="usuario" name="usuario">
+                                        <input type="text" class="form-control" id="usuario" name="usuario" value="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group" id="campoclave">
                                         <label class="control-label" for="clave">Clave de acceso</label>
-                                        <input type="password" class="form-control" id="clave" name="clave">
+                                        <input type="password" class="form-control" id="clave" name="clave" value="">
                                     </div>
                                 </div> 
                                 <div class="col-lg-6">
                                     <div class="form-group" id="campoTipo">
+                                        <label class="control-label" for="clave">Tipo de usuario</label>
                                         <select class="form-control" id="tipo" name="tipo">
-                                            <option value="2">Cliente 1</option>
-                                            <option value="3">Cliente 2</option>
+                                            <option value="2" selected>Técnico</option>
                                             <option value="1">Administrador</option>                                       
                                         </select>                                    
                                     </div>
                                 </div> 
                                 <div class="col-lg-6">
                                     <div class="form-group" id="campoStatus">
+                                    <label class="control-label" for="clave">Estado</label>
                                         <select class="form-control" id="status" name="status">
-                                            <option value="1">Activo</option>
+                                            <option value="1" selected>Activo</option>
                                             <option value="0">Inactivo</option>
                                         </select>                                    
                                     </div>

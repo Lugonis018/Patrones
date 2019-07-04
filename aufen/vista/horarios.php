@@ -6,7 +6,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Horarios</title>
+    <title>Portal de asignación de trabajos</title>
     <!--CSS-->    
     <link rel="stylesheet" href="assets/css/bootstrap-yeti.css">
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap.min.css">
@@ -62,7 +62,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
             <div class="modal-content" >
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >&times;</button>
-                    <h4 class="modal-title"><b></b>Registro de trabajo</h4>
+                    <h4 class="modal-title"><b></b>Registro de asignación</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row-fluid" id="notificacion"></div>
@@ -73,6 +73,13 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                                     <div class="form-group" id="campousuario">
                                         <label class="control-label" for="usuarios_id">Empleado</label>
                                         <input type="text" class="form-control" id="usuarios_id" name="usuarios_id" autofocus>
+                                        
+                                          <select multiple class="form-control" name="" id="" onclick="">
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                          </select>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -89,7 +96,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                                 </div>                          
                                 <div class="col-lg-4 col-lg-offset-8">
                                     <div class="form-group">
-                                         <button type="submit" class="btn btn-primary btn-block">Registrar</button>                                     
+                                         <button type="submit" class="btn btn-primary btn-block">Asignar</button>                                     
                                     </div>
                                 </div>
                             </div>   
@@ -109,7 +116,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
             <div class="modal-content" >
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"><b></b>Actualizar Horario</h4>
+                    <h4 class="modal-title"><b></b>Actualizar Asignación</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row-fluid" id="mensaje"></div>

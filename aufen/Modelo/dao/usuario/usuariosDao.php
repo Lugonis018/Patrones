@@ -175,6 +175,20 @@ class usuarioDao {
         return $result;
     }
 
+    function traeUsuariosSoloNombreDao() {
+
+        $result = '<option selected value="">--Seleccionar--</option>';
+        $st = "SELECT id,nombre FROM usuarios";
+        $query= $this->con->query($st); 
+  
+        while ($row =  mysqli_fetch_array($query) ) {
+        
+        
+            $result.= '<option value="'.$row['id'].'">'.$row['nombre'].'</option>';
+      }
+          return $result;
+      }
+
     function actualizarUsuarioDao($usuario) {
       $cad = "";
       $st = "SELECT * FROM usuarios WHERE usuario = '$usuario'";

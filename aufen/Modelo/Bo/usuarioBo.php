@@ -24,6 +24,11 @@ class usuarioBo {
         $resultado = $this->dao->traeUsuariosDao();
         return $resultado;
     }
+    
+    function traeUsuariosSoloNombreBo(){
+        $resultado = $this->dao->traeUsuariosSoloNombreDao();
+        return $resultado;
+    }
 
     function actualizarUsuarioBo($usuario) {
         $resultado = $this->dao->actualizarUsuarioDao($usuario);

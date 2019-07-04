@@ -212,9 +212,9 @@ class trabajoDao {
                         <div class="form-group" id="campoTiposTrabajoId">
                             <select class="form-control" id="tiposTrabajoId" name="m">
                                 <option selected value="'.$row['Tipos_trabajo_id'].'">--Click para cambiar--</option>
-                                <option value="1">Tipos de trabajo 1</option>
-                                <option value="2">Tipos de trabajo 2</option>
-                                <option value="3">Tipos de trabajo 3</option>
+                                <option value="1">Servicio Técnico</option>
+                                <option value="2">Desarrollo de Software</option>
+                                <option value="3">Instalación de redes</option>
                             </select>                                    
                         </div>
                     </div>                            

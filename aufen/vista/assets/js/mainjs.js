@@ -5,7 +5,8 @@ x.ready(inicializarEventos);
 function inicializarEventos() {
     loadUsers(); 
     loadTrabajos();
-    loadDocumentos();       
+    loadDocumentos();
+    loadHorarios();
 }
 function loadUsers() {
     $('#contenido').html("");
@@ -23,7 +24,7 @@ function loadTrabajos() {
 } 
 function loadDocumentos() {
     $('#contenido').html("");
-    $.post("PDF.php", function(response) {        
+    $.post("pdf.php", function(response) {        
         $('#contenido').html(response);
         $('#contenido').fadeIn();
     });

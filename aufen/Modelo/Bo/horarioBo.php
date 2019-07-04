@@ -13,13 +13,6 @@ class horarioBo {
         $this->dao=new horariosDao();
     }
 
-    /*
-    function identificarUsuarioBo($usuario, $password) {
-        $resultado = $this->dao->identificarUsuarioDao($usuario, $password);
-        return $resultado;
-    }
-    */
-
     function registrarHorarioBo($usuarios_id, $trabajos_id, $fecha_asignacion) {
         $resultado = $this->dao->registrarHorarioDao($usuarios_id, $trabajos_id, $fecha_asignacion);
         return $resultado;
@@ -44,26 +37,5 @@ class horarioBo {
         $resultado = $this->dao->eliminarHorarioDao($id);
         return $resultado;
     }
-
-    /*
-    function logoutBo() {
-        $resultado = $this->dao->logoutDao();
-        return $resultado;
-    }
-    
-
-    function sessionValidateBo() {
-        $resultado = $this->dao->sessionValidateDao();
-        return $resultado;
-    }
-
-    function sessionUserTypeBo($type) {
-        $resultado = $this->dao->sessionUserTypeDao($type);
-        return $resultado;
-    }
-    */
-    
-    
-    
     
 }

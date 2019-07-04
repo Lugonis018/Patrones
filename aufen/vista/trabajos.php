@@ -75,19 +75,19 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                     <form id="formregistro"> 
                         <fieldset>
                             <div class="form-group">                            
-                                <div class="col-lg-4">
+                                <div class="col-lg-8">
                                     <div class="form-group" id="camponombre">
                                         <label class="control-label" for="nombre">Nombre</label>
                                         <input type="text" class="form-control" id="nombre" name="nombre" autofocus>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-10">
                                     <div class="form-group" id="campodescripcion">
                                         <label class="control-label" for="descripcion">Descripción</label>
                                         <input type="text" class="form-control" id="descripcion" name="descripcion">
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-6">
                                     <div class="form-group" id="campofecha_inicio">
                                         <label class="control-label" for="fecha_inicio">Fecha de Inicio</label>
                                         <input type="datetime-local" class="form-control" id="fecha_inicio" name="fecha_inicio">
@@ -95,10 +95,11 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group" id="campoTiposTrabajoId">
+                                        <label class="control-label" for="fecha_inicio">Tipo de trabajo</label>
                                         <select class="form-control" id="tiposTrabajoId" name="tiposTrabajoId">
-                                        <option selected value="1">Tipos de trabajo 1</option>
-                                        <option value="2">Tipos de trabajo 2</option>
-                                        <option value="3">Tipos de trabajo 3</option>
+                                        <option selected value="1">Servicio Técnico</option>
+                                        <option value="2">Desarrollo de Software</option>
+                                        <option value="3">Instalación de redes</option>
                                         </select>                                    
                                     </div>
                                 </div>                            

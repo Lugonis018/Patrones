@@ -13,7 +13,12 @@ require_once "../controlador/sessionUserTypeAdmin.php";
      <!-- FONTAWESOME STYLES-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />    
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">    
 </head>
 <body>
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
@@ -44,54 +49,19 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                         <img src="assets/img/find_user.png" class="user-image img-responsive"/>
                     </li>
                     <li>
-                        <a  href="#" onclick="loadUsers()"><i class="fa fa-dashboard fa-2x" ></i> Usuarios</a>
+                        <a  href="#" onclick="loadUsers()"><i class="fa fa-user fa-2x" ></i> Usuarios</a>
                     </li>
                       <li>
-                        <a  href="#" onclick="loadTrabajos()"><i class="fa fa-desktop fa-2x"></i> Trabajos</a>
+                        <a  href="#" onclick="loadTrabajos()"><i class="fa fa-folder-open-o fa-2x"></i> Trabajos</a>
                     </li>
                     <li>
-                        <a  href="#" onclick="loadHorarios()"><i class="fa fa-qrcode fa-2x"></i> Horarios</a>
-                    </li>
-                    <li  >
-                        <a  href="" onclick="loadDocumentos()"><i class="fa fa-bar-chart-o fa-2x"></i> Documentos</a>
-                    </li>   
+                        <a  href="#" onclick="loadHorarios()"><i class="fa fa-calendar fa-2x"></i> Horarios</a>
+                    </li> 
                       <li  >
-                        <a  href="#"><i class="fa fa-table fa-2x"></i> Table Examples</a>
-                    </li>
-                    <li  >
-                        <a  href="#"><i class="fa fa-edit fa-2x"></i> Forms </a>
-                    </li>               
-                    
-                                       
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap fa-2x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-                               
-                            </li>
-                        </ul>
-                      </li>  
+                        <a  href="#" onclick="loadDocumentos()"><i class="fa fa-file-pdf-o fa-2x"></i> Documentos</a>
+                    </li>        
                   <li  >
-                        <a class="active-menu"  href="blank.html"><i class="fa fa-square-o fa-2x"></i> Blank Page</a>
+                        <a class="active-menu"  href="menu1.php"><i class="fa fa-square-o fa-2x"></i> AUFEN</a>
                     </li>   
                 </ul>
                
@@ -106,7 +76,7 @@ require_once "../controlador/sessionUserTypeAdmin.php";
                     <div class="row-fluid" id="contenido">
                         <div class="col-md-12">
                          <h2>Blank Page</h2>   
-                         <h5>Welcome, Love to see you back. </h5>
+                         <h5>Welcome, Love to see you back.  </h5>
                          <!-- <object data="SG53-chatbots.pdf" type="application/pdf" width="100%" height="1050px">                           
                          </object> -->
                         </div>                   
